@@ -1,0 +1,1738 @@
+@font-face {
+  font-family: abc;
+  src: url("font/font1.ttf");
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background: white !important;
+}
+html{
+  scroll-behavior: smooth;
+}
+ /*Main Header section -----------------------------------------*/
+
+header{
+  height: 100vh;
+  width: 100%;
+}
+.social-menu ul{
+  display: flex;
+  width: 200px;
+  justify-content: space-evenly;
+  padding: 5px;
+  position: relative;
+  left: 77px;
+  top: 10px;
+  z-index: 2;
+}
+.social-menu li{
+  text-decoration: none;
+  list-style: none;
+}
+.social-menu li a{
+  color: white;
+  font-size: 20px;
+}
+nav{
+  background: white;
+  width: 85%;
+  position: relative;
+  left: 8%;
+  height: 73px;
+  top: 0px;
+  z-index: 3;
+}
+nav:after{
+  content: '';
+  clear: both;
+  display: table;
+}
+nav .logo{
+  float: left;
+  color: goldenrod;
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 70px;
+  padding-left: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.459);
+  background-color: black;
+  padding-bottom: 4px;
+  padding-right: 20px;
+}
+nav ul{
+  float: right;
+  margin-right: 40px;
+  list-style: none;
+  position: relative;
+}
+nav ul li{
+  float: left;
+  display: inline-block;
+  background: white;
+  margin: 0 5px;
+  z-index: 11;
+}
+nav ul li a{
+  color: grey;
+  line-height: 70px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: lighter;
+  padding: 8px 15px;
+  z-index: 10;
+}
+nav ul li a:hover{
+  background-color: goldenrod;
+  color: black;
+  border-radius: 1px;
+  box-shadow:  0 0 5px black,
+               0 0 2px goldenrod ;
+}
+nav ul ul li a:hover{
+  box-shadow: none;
+}
+nav ul ul{
+  position: absolute;
+  top: 90px;
+  border-top: 3px solid black;
+  opacity: 0;
+  visibility: hidden;
+  transition: top .3s;
+}
+nav ul ul ul{
+  border-top: none;
+}
+nav ul li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+nav ul ul li{
+  position: relative;
+  margin: 0px;
+  width: 240px;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+nav ul ul li a{
+  line-height: 50px;
+}
+nav ul ul ul li{
+  position: relative;
+  top: -60px;
+  left: 150px;
+}
+.show,.icon{
+  display: none;
+}
+.fa-plus{
+  font-size: 15px;
+  margin-left: 40px;
+}
+
+.booking{
+  width: 330px;
+  height: auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  z-index: 2;
+}
+.booking input{
+  background-color: gray;
+  color: white;
+
+}
+.booking h2{
+  font-size: 20px;
+  text-align: center;
+  background-color: rgb(0, 0, 0);
+  color: goldenrod;
+  padding: 10px;
+  border-radius: 5px;
+}
+label{
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.booking button{
+  background-color: goldenrod;
+  border-radius: 5px;
+  border: none;
+  padding: 9px 0px;
+  margin-top: 15px;
+  text-align: center;
+  width: 100%;
+  color: black;
+  transition-duration: .5s;
+  box-shadow: 2px 2px 5px black;
+}
+.booking button:hover{
+  background-color: black;
+  color: goldenrod;
+
+}
+/* Header carousel start */
+#carousel1{
+  position: absolute;
+  top: 0px;
+  height: 100vh;
+  width: 100%;
+}
+.carousel-item::before{
+  content: "";
+  display: block;
+  position: absolute;
+}
+.carousel-caption{
+  position: relative;
+  top: 260px;
+  padding-left: 100px;
+  padding-right: 100px;
+  animation-name: abc;
+  animation-duration: 3s;
+}
+@keyframes abc{
+  0%{
+    top: 350px;
+  }
+  100%{
+    top: 260px;
+  }
+}
+
+.carousel-caption h2{
+  position: relative;
+  left: 40%;
+  font-size: 60px;
+  font-family: abc;
+  border-top: 2px solid black;
+  border-bottom: 2px solid white;
+  color: goldenrod;
+  width: 50%;
+  text-shadow: 1px 1px 1px black;
+}
+.carousel-caption p{
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  border-bottom: 2px solid #daa520;
+  color: white;
+  width: 62%;
+  position: relative;
+  left: 35%;
+  text-shadow: 1px 1px 1px black;
+}
+#carousel1 img{
+  height: 110vh;
+  object-fit: cover;
+  filter: saturate(110%)brightness(60%)contrast(110%);
+}
+ /* Header Carousel section end -----------------------------------------*/
+
+/* --------------------------------------------------------- */
+/* about section */
+#about{
+  background-color:  white;
+  border: none;
+}
+#about .container{
+  background-color:  white;
+  color: rgb(17, 17, 17);
+  padding-top: 40px;
+}
+.aboutstar{
+  padding-top: 25px;
+}
+.aboutstar i{
+  color: goldenrod;
+}
+#about-heading{
+  color: goldenrod;
+}
+#about p{
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  font-size: 15px;
+}
+#about h2{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 50px;
+  font-weight: lighter;
+}
+#about-img{
+  display: flex;
+  width: 30%;
+}
+#about-img img{
+  padding: 20px;
+}
+#about1{
+  margin-top: 50px;
+  z-index: 22;
+  height: 85%;
+}
+#about2{
+  height: 90%;
+  filter: hue-rotate(20deg);
+  position: relative;
+  right: 25%;
+}
+.telephoneicon{
+  display: flex;
+}
+.telephoneicon i{
+  font-size: 40px;
+  padding-right: 20px;
+  position: relative;
+  top: 5px;
+  color: goldenrod;
+}
+.telephoneicon .heading h4 a{
+  text-decoration: none;
+  position: relative;
+  top: -12px;
+  right: 3px;
+  color: goldenrod;
+  padding: 2px;
+  font-family:Cambria,  Georgia, Times, 'Times New Roman', serif;
+}
+
+/* ---------------------------------------------------------- */
+#intro{
+  padding-bottom: 40px;
+  background: #000000;
+  height: 30vh;
+  color: #f2f2f2;
+ }
+ #rooms-home-link{
+  font-family: abc;
+  font-size: 60px;
+  width: 50%;
+  padding-top: 10px;
+  margin-bottom: 50px;
+  margin-left: 26%;
+  border-bottom: 1px solid goldenrod;
+ }
+ #border{
+  width: 25%;
+  margin-top: -30px;
+  margin-left: 37%;
+  padding-bottom: 50px; 
+ }
+
+ /* owl carousel */
+ .wrapper{
+  height: auto;
+  padding-bottom: 50px;
+  background-color: rgb(0, 0, 0);
+  border: none;
+  display: flex;
+}
+.wrapper img{
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+/* .wrapper .owl-prev,.wrapper .owl-next{
+  position: absolute;
+  top: 40%;
+  color: white !important;
+  font-size: 3rem !important;
+}
+.wrapper .owl-prev{
+  left: 2%;
+  transition-duration: .7s;
+}
+.wrapper .owl-next{
+  right: 2%;
+  transition-duration: .7s;
+}
+.wrapper .owl-prev:hover{
+  background-color: goldenrod !important;
+}
+.wrapper .owl-next:hover{
+  background-color: goldenrod !important;
+} */
+.wrapper .item{
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+  height: 50vh;
+  transition-duration: 1s;
+  width: 97%;
+  float: left;
+}
+.wrapper .item:hover{
+  height: 73vh;
+}
+.wrapper .item:hover .owl-btn{
+  height: 40px;
+  width: 99%;
+  font-size: 20px;
+  opacity: 1;
+  transition-duration: 2s;
+}
+.wrapper .item:hover p{
+  transition-duration: 3s;
+  font-size: 15px;
+  opacity: 1;
+}
+.wrapper .item p{
+  padding: 5px;
+  text-align: center;
+  font-size: 15px;
+  opacity: 0;
+}
+.owl-btn {
+  background-color: goldenrod;
+  border: none;
+  text-align: center;
+  height: 0px;
+  width: 0%;
+  opacity: 0;
+  font-size: 0px;
+  color: black;
+  box-shadow: 2px 2px 5px black;
+}
+.owl-btn:hover{
+  background-color: black;
+  color: goldenrod;
+}
+.heading-fonts{
+  font-family: 'Times New Roman', Times, serif;
+  color: #daa520;
+  padding-top: 10px;
+}
+/* Our services----------------------------------------- */
+#services{
+  background-color: white;
+}
+#services-cont p{
+  padding-top: 7%;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  font-size: 15px;
+  padding-left: 5px;
+}
+#services-cont h5{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 50px;
+  font-weight: lighter;
+  padding-left: 5px;
+}
+#service1{
+  border: 1px solid rgba(0, 0, 0, 0.306);
+  margin: auto;
+  margin-bottom: 3%;
+  width: 32%;
+  height: 35vh;
+  padding: 20px;
+}
+#service1 img{
+  width: 15%;
+  padding-bottom: 15px;
+}
+#service1 p{
+  padding-left: 0px;
+  padding-top: 0%;
+}
+#service1 h3{
+  font-family:'Times New Roman', Times, serif ;
+}
+/* Standard room Section------------------------------------------------------------------------ */
+
+/* header section start------------------------ */
+.Standard-header{
+  background-image:linear-gradient(rgba(0, 0, 0, 0.525),rgba(0, 0, 0, 0.525)),url(images/standard.jpg);
+  background-size: cover;
+  height: 100vh;
+  clip-path: polygon(0 0, 100% 0%, 100% 74%, 50% 100%, 0 74%);
+  z-index: -33;
+}
+.standard-content{
+  border: 1px solid;
+  display: flex;
+  width: 100%;
+  height: 70vh;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+.standard-heading h1{
+  text-align: center;
+  color: white;
+  font-family: abc;
+  font-size: 4rem;
+  text-shadow: 1px 1px 5px black;
+  margin-left: 30px;
+}
+.standard-heading img{
+  width: 50%;
+  position: relative;
+  left: 27%;
+  top: -10px;
+}
+#stand-btn{
+  height: 5rem;
+  width: 10rem;
+  position: relative;
+  top: -18px;
+  padding: 10px;
+  background-color: #000000;
+  border: 1px solid goldenrod;
+  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+}
+#stand-btn a{
+  text-decoration: none;
+  color: goldenrod;
+  font-family: abc;
+  font-size: 20px;
+}
+.sroll{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 85%;
+  height: 50px;
+  width: 100%;
+  height: 70px;
+}
+.sroll a{
+  border: 1px solid white;
+  width: 70px;
+  padding-top: 20px;
+  text-align: center;
+  border-radius: 50px;
+  color: white;
+  font-size: 20px;
+  box-shadow: 1px 1px 5px rgb(95, 95, 95);
+}
+/* room information section */
+#standardroom-content{
+  background-color:  white;
+  border: none;
+}
+#standardroom-content .container{
+  background-color:  white;
+  color: rgb(17, 17, 17);
+  padding-top: 40px;
+}
+.standardstar{
+  padding-top: 25px;
+}
+.standardstar i{
+  color: goldenrod;
+}
+#standard-heading{
+  color: goldenrod;
+}
+#standardroom-content p{
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  font-size: 15px;
+}
+#standardroom-content h2{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 50px;
+  font-weight: lighter;
+}
+.amenties-cont{
+  padding-left: 110px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: #f2f2f2;
+  clip-path: polygon(50% 0%, 100% 30%, 100% 100%, 0 100%, 0 30%);
+}
+#amenties h2{
+  padding-top: 28%;
+  font-size: 30px;
+  padding-bottom: 5px;
+}
+#amenties p{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: black;
+  font-size: 17px;
+}
+#amenties i{
+  color: #daa520;
+  padding-right: 2px;
+}
+#standardroom-content h3{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+}
+
+/* btn for booking */
+.Standard-btn button{
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  clip-path: polygon(0 10%, 15% 10%, 15% 0%, 85% 0%, 85% 10%, 100% 10%, 100% 89%, 85% 89%, 85% 100%, 15% 100%, 15% 89%, 0 89%);
+  background-color: black;
+  color: goldenrod;
+  border: 2px solid goldenrod;
+}
+/* discount section */
+#discount-container{
+  background-image:linear-gradient(rgba(0, 0, 0, 0.551),rgba(0, 0, 0, 0.551)),url(images/slider1.jpg);
+  height: 30vh;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#discount-content{
+  padding-top: 50px;
+  color: white;
+}
+#discount-content button{
+  padding: 10px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid goldenrod;
+  border-radius: 5px ;
+}
+
+/* footer design */
+.container-footer{
+	max-width: 1170px;
+	margin:auto;
+}
+.row-footer{
+	display: flex;
+	flex-wrap: wrap;
+}
+.container-footer ul{
+	list-style: none;
+  position: relative;
+  left: -32px;
+}
+.footer{
+	background-color: black;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: goldenrod;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: goldenrod;
+}
+
+
+#row-card{
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 15px;
+}
+#row-card .card-img-top{
+  height: 210px;
+}
+#row-card .btn{
+  background-color: black;
+  color: goldenrod;
+  clip-path: polygon(0 10%, 15% 10%, 15% 0%, 85% 0%, 85% 10%, 100% 10%, 100% 89%, 85% 89%, 85% 100%, 15% 100%, 15% 89%, 0 89%);
+  border: 2px solid goldenrod;
+}
+
+/* DELUXE SECTION ROOM START  --------------------------------------------------------*/
+.Deluxe-header{
+  background-image:linear-gradient(rgba(0, 0, 0, 0.525),rgba(0, 0, 0, 0.525)),url(images/deluxe.jpg);
+  background-size: cover;
+  height: 100vh;
+  clip-path: polygon(0 0, 100% 0%, 100% 74%, 50% 100%, 0 74%);
+  z-index: -33;
+}
+/* DELUXE SECTION ROOM START  --------------------------------------------------------*/
+.Executive-header{
+  background-image:linear-gradient(rgba(0, 0, 0, 0.525),rgba(0, 0, 0, 0.525)),url(images/executive.jpg);
+  background-size: cover;
+  height: 100vh;
+  clip-path: polygon(0 0, 100% 0%, 100% 74%, 50% 100%, 0 74%);
+  z-index: -33;
+}
+/* Luxury SECTION ROOM START  --------------------------------------------------------*/
+.Luxury-header{
+  background-image:linear-gradient(rgba(0, 0, 0, 0.525),rgba(0, 0, 0, 0.525)),url(images/luxury.jpg);
+  background-size: cover;
+  height: 100vh;
+  clip-path: polygon(0 0, 100% 0%, 100% 74%, 50% 100%, 0 74%);
+  z-index: -33;
+}
+/* MEETING SECTION ROOM START  --------------------------------------------------------*/
+.meeting-header{
+  background-image:linear-gradient(rgba(0, 0, 0, 0.181),rgba(0, 0, 0, 0.214)),url(images/meeting-gallery-6.jpeg);
+  background-size: cover;
+  height: 90vh;
+  z-index: -33;
+}
+/* Contact SECTION ROOM START  --------------------------------------------------------*/
+.contact-header{
+  background-color: goldenrod;
+  background-size: cover;
+  height: 100vh;
+  z-index: -33;
+}
+
+.meeting-header-text{
+width: 100%;
+margin-top: 150px;
+text-align: center;
+}
+.meeting-header-text h1{
+  font-family: abc;
+  color: rgb(234, 179, 42);
+  font-size: 50px;
+  text-shadow: 2px 2px 2px rgba(42, 42, 42, 0.46);
+}
+.meeting-header-text p{
+  color: white;
+  font-size: 20px;
+  border-bottom: 2px solid white;
+  text-shadow: 2px 2px 2px rgba(42, 42, 42, 0.46);
+  width: fit-content;
+  margin-left: 40%;
+  margin-top: 20px;
+}
+
+.meeting-info-cont{
+  padding-left: 200px;
+  padding-right: 200px;
+  text-align: center;
+}
+.meeting-info-cont h2{
+  font-family: abc;
+  font-size: 40px;
+  margin-top: 10px;
+  border-bottom: 1px solid black;
+}
+.meeting-info-cont p{
+  margin-bottom: 50px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+
+}
+
+
+.fact{
+  display: flex;
+  background-color: goldenrod;
+  padding: 40px;
+  border: 1px solid black;
+
+}
+.fact h2{
+  text-align: left;
+  padding-left: 200px;
+  font-family: abc;
+  font-size: 40px;
+}
+.fact p{
+  padding-left: 200px;
+  text-align: left;
+}
+.fact-info{
+  width: 50%;
+  text-align: center;
+}
+.fact-measure{
+  width: 35%;
+}
+.fact-measure p{
+  border-bottom: 1px solid black;
+  text-align: right;
+}
+
+
+@media (max-width: 768px) {
+  .meeting-info{
+    height: auto;
+  }
+  .meeting-info-cont{
+    padding-left: 90px;
+    padding-right: 90px;
+    text-align: center;
+  }
+  .meeting-info-cont h2{
+    font-family: abc;
+    font-size: 30px;
+    margin-top: 10px;
+    border-bottom: 1px solid black;
+  }
+  .meeting-info-cont p{
+    margin-bottom: 20px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+  
+  }
+  .fact{
+    display: block;
+    background-color: goldenrod;
+    padding: 40px;
+    border: 1px solid black;
+  
+  }
+  .fact h2{
+    text-align: left;
+    padding-left: 10px;
+    font-family: abc;
+    font-size: 40px;
+  }
+  .fact p{
+    padding-left: 10px;
+    text-align: left;
+  }
+  .fact-info{
+    width: 100%;
+    text-align: center;
+  }
+  .fact-measure{
+    width: 100%;
+  }
+  
+}
+@media (max-width: 480px){
+  .meeting-info-cont{
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+  }
+}
+
+
+
+
+
+/* inquire form sec---------------------------- */
+
+#contact {
+  width: 100%;
+  height: 72vh;
+  border-bottom:1px solid black;
+  background-color: black;
+  margin-bottom: 20px;
+}
+
+.section-header {
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px 0;
+  font-family: abc;
+  color: #fff;
+  letter-spacing: 6px;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  max-width: 840px;
+}
+
+/* Left contact page */
+.form-horizontal {
+  /* float: left; */
+  max-width: 400px;
+  font-family: 'Lato';
+  font-weight: 400;
+  display: inline;
+}
+
+.form-control, 
+textarea {
+  max-width: 400px;
+  background-color: #000;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.send-button {
+  margin-top: 15px;
+  height: 34px;
+  width: 400px;
+  overflow: hidden;
+  transition: all .2s ease-in-out;
+}
+
+.alt-send-button {
+  width: 400px;
+  height: 34px;
+  transition: all .2s ease-in-out;
+}
+
+.send-text {
+  display: block;
+  margin-top: 10px;
+  font: 700 12px 'Lato', sans-serif;
+  letter-spacing: 2px;
+}
+
+.alt-send-button:hover {
+  transform: translate3d(0px, -29px, 0px);
+}
+
+/* Begin Right Contact Page */
+.direct-contact-container {
+  max-width: 400px;
+}
+
+/* Location, Phone, Email Section */
+.contact-list {
+  list-style-type: none;
+  margin-left: -30px;
+  padding-right: 20px;
+}
+
+.list-item {
+  line-height: 4;
+  color: #aaa;
+}
+
+.contact-text {
+  font: 300 18px 'Lato', sans-serif;
+  letter-spacing: 1.9px;
+  color: #bbb;
+}
+
+.place {
+  margin-left: 62px;
+}
+
+.phone {
+  margin-left: 56px;
+}
+
+.gmail {
+  margin-left: 53px;
+}
+
+.contact-text a {
+  color: #bbb;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.contact-text a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/* Social Media Icons */
+.social-media-list {
+  position: relative;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.social-media-list li a {
+  color: #fff;
+}
+
+.social-media-list li {
+  position: relative; 
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 10px 3px;
+  line-height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgb(27,27,27);
+  cursor: pointer; 
+  transition: all .2s ease-in-out;
+}
+
+.social-media-list li:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 0 1px #fff;
+  transition: all .2s ease-in-out;
+}
+
+.social-media-list li:hover {
+  background-color: #fff; 
+}
+
+.social-media-list li:hover:after {
+  opacity: 1;  
+  transform: scale(1.12);
+  transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+}
+
+.social-media-list li:hover a {
+  color: #000;
+}
+
+.copyright {
+  font: 200 14px 'Oswald', sans-serif;
+  color: #555;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+hr {
+  border-color: rgba(255,255,255,.6);
+}
+
+/* contact page large */
+
+
+/* Begin Media Queries*/
+@media screen and (max-width: 850px) {
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .direct-contact-container, .form-horizontal {
+    margin: 0 auto;
+  }  
+  
+  .direct-contact-container {
+    margin-top: 60px;
+    max-width: 300px;
+  }    
+  .social-media-list li {
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+  }
+  .social-media-list li:after {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+}
+
+@media screen and (max-width: 569px) {
+
+  .direct-contact-container, .form-wrapper {
+    float: none;
+    margin: 0 auto;
+  }  
+  .form-control, textarea {
+    
+    margin: 0 auto;
+  }
+ 
+  
+  .name, .email, textarea {
+    width: 280px;
+  } 
+  
+  .direct-contact-container {
+    margin-top: 60px;
+    max-width: 280px;
+  }  
+  .social-media-list {
+    left: 0;
+  }
+  .social-media-list li {
+    height: 55px;
+    width: 55px;
+    line-height: 55px;
+    font-size: 2rem;
+  }
+  .social-media-list li:after {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+  }
+  
+}
+
+@media screen and (max-width: 410px) {
+  .contact-wrapper {
+    display: block;
+    flex-direction: column;
+  }
+  .send-button {
+    width: 99%;
+  }
+}
+
+/* MEETING SECTION ROOM START  --------------------------------------------------------*/
+.wedding-header{
+  background-image:linear-gradient(rgba(0, 0, 0, 0.181),rgba(0, 0, 0, 0.214)),url(images/wedding.jpg);
+  background-size: cover;
+  height: 90vh;
+  z-index: -33;
+}
+.wedding-header-text{
+width: 100%;
+margin-top: 150px;
+text-align: center;
+}
+.wedding-header-text h1{
+  font-family: abc;
+  color: rgb(234, 179, 42);
+  font-size: 50px;
+  text-shadow: 2px 2px 2px rgba(42, 42, 42, 0.46);
+}
+.wedding-header-text p{
+  color: white;
+  font-size: 20px;
+  border-bottom: 2px solid white;
+  text-shadow: 2px 2px 2px rgba(42, 42, 42, 0.46);
+  width: fit-content;
+  margin-left: 37%;
+  margin-top: 20px;
+}
+
+.wedding-info-cont{
+  padding-left: 200px;
+  padding-right: 200px;
+  text-align: center;
+}
+.wedding-info-cont h2{
+  font-family: abc;
+  font-size: 40px;
+  margin-top: 10px;
+  border-bottom: 1px solid black;
+}
+.wedding-info-cont p{
+  margin-bottom: 50px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+
+}
+
+@media (max-width: 768px) {
+
+.wedding-info{
+  height: 30vh;
+}
+.wedding-info-cont{
+  padding-left: 90px;
+  padding-right: 90px;
+  text-align: center;
+}
+.wedding-info-cont h2{
+  font-family: abc;
+  font-size: 30px;
+  margin-top: 10px;
+  border-bottom: 1px solid black;
+}
+.wedding-info-cont p{
+  margin-bottom: 20px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+
+}
+}
+
+@media (max-width: 480px){
+  .wedding-info{
+    height: 30vh;
+  }
+  .wedding-info-cont{
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+  }
+}
+
+
+
+/* Responsive section */
+
+@media (min-width: 992px) and (max-width: 1230px) {
+  #main-heading{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    margin-top: 0px;
+   }
+  /* social icon top */
+  .social-menu ul{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+    background-color: #000000;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+  .social-menu li{
+    padding: 7px 10px;
+  }
+  /* navbar section -----------------------------------------*/
+  
+  nav{
+    background: white;
+    width: 100%;
+    position: relative;
+    left: 0;
+    height: 73px;
+    top: -30px;
+  }
+  nav ul{
+    margin-right: 5px;
+  }
+  nav ul li{
+    margin: 0 5px;
+    z-index: 10;
+  }
+  nav ul li a{
+    color: grey;
+    font-size: 18px;
+    z-index: 11;
+  }
+
+    /* Carousel Header section -----------------------------------------*/
+  .carousel-caption{
+    top: 260px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .carousel-caption h2{
+    left: 50%;
+    font-size: 55px;
+    width: 50%;
+  }
+  .carousel-caption p{
+    font-size: 25px;
+    width: 50%;
+    left: 50%;
+  }
+  /* about */
+  #about-img{
+    display: flex;
+    width: 28%;
+    height: 50%;
+  }
+  #about-img{
+   margin-top: 5%;
+  }
+  #about1{
+    z-index: 0;
+    height: auto;
+  }
+  #about2{
+    height: auto;
+    position: relative;
+    right: 0;
+  }
+  .amenties-cont{
+    padding-left: 80px;
+  }
+}
+
+@media (max-width: 992px) {
+  .social-menu ul{
+    display: none;
+  }
+  #carousel-ind{
+    display: none;
+  }
+
+  nav{
+    background: #000000;
+    width: 100%;
+    position: relative;
+    left: 0;
+    top: -10px;
+    height: auto;
+    padding-top: 15px;
+  }
+  nav ul{
+    margin-right: 5px;
+    float: left;
+  }
+  nav .logo{
+    padding-left: 30px;
+    width: 100%;
+  }
+  .show + a, ul{
+    display: none;
+  }
+  nav ul li,nav ul ul li{
+    display: block;
+    width: 100%;
+    background-color: black;
+  }
+  nav ul li a:hover{
+    box-shadow: none;
+  }
+  .show{
+    display: block;
+    color: gray;
+    font-size: 18px;
+    padding: 0px 20px;
+    line-height: 70px;
+    cursor: pointer;
+  }
+  .show:hover{
+    color: goldenrod;
+  }
+  .icon{
+    display: block;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    line-height: 100px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  nav ul ul{
+    top: 70px;
+    border-top: 0px;
+    float: none;
+    position: static;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  nav ul ul a{
+    padding-left: 40px;
+  }
+  nav ul ul ul a{
+    padding-left: 80px;
+  }
+  nav ul ul ul li{
+    position: static;
+  }
+  [id^=btn]:checked + ul{
+    display: block;
+  }
+  nav ul ul li{
+    border-bottom: 0px;
+  }
+  span.cancel:before{
+    content: '\f00d';
+  }
+  .carousel-caption{
+    top: 35%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .carousel-caption h2{
+    left: 60%;
+    font-size: 50px;
+    width: 50%;
+  }
+  .carousel-caption p{
+    font-size: 20px;
+    width: 50%;
+    left: 60%;
+  }
+  /* About section */
+  #about-img{
+    width: 45%;
+    position: relative;
+    left: 15%;
+    top: -20px;
+  }
+  #about2{
+    height: auto;
+  }
+/* STNADARD ROOM AMENTIES------------------------------------ */
+  .amenties-cont{
+    text-align: center;
+    padding-left: 0;
+  }
+}
+@media (max-width: 767px){
+  .booking{
+    width: 90%;
+    height: auto;
+    background-color: black;
+    padding: 20px;
+    position: relative;
+    top: 40%;
+    left: 5%;
+    z-index: 2;
+    box-shadow: 1px 1px 5px rgb(184, 184, 184);
+  }
+  .wrapper{
+    height: auto;
+    margin: auto;
+  }
+  .wrapper .item{
+    border: 1px solid white;
+    color: white;
+    text-align: center;
+    height: 40vh;
+    transition-duration: 1s;
+  }
+  .wrapper .item:hover{
+    height: 52vh;
+  }
+  .wrapper img{
+    height: 30vh;
+  }
+  .owl-btn{
+    transition-duration: 1s;
+  }
+  .booking input{
+    background-color: gray;
+    color: white;
+  }
+  
+  .booking h2{
+    background-color: goldenrod;
+    color: black;
+  }
+  label{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .booking button{
+    background-color: goldenrod;
+    color: white;
+    transition-duration: .5s;
+  }
+  .booking button:hover{
+    background-color: white;
+    color: black;
+  
+  }
+  .carousel-caption{
+    position: relative;
+    top: 110px;
+  }
+  @keyframes abc{
+    0%{
+      top: 170px;
+    }
+    100%{
+      top: 110px;
+    }
+  }
+  .carousel-caption h2{
+    position: relative;
+    left: 0%;
+    font-size: 45px;
+    width: 100%;
+  }
+  .carousel-caption p{
+    font-size: 25px;
+    color: white;
+    width: 90%;
+    left: 5%;
+  }
+  .social-menu ul{
+    display: none;
+  }
+  #carousel-ind{
+    display: none;
+  }
+  /* About section responsive -------------------------------*/
+  #about-img{
+    width: 60%;
+    height: auto;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+  #about-img img{
+    padding: 10px;
+  }
+  #about1{
+    margin-top: auto;
+    z-index: 22;
+  }
+  #about2{
+    position: relative;
+    right: 25%;
+  }
+  /* owl carousel room-------------------------------------- */
+  #intro {
+    height: 23vh;
+  }
+  #rooms-home-link{
+    margin-left: 27%;
+    font-size: 3.5rem;
+  }
+  #border{
+    width: 50%;
+    margin-top: -30px;
+    margin-left: 26%;
+    padding-bottom: 20px;
+   }    
+    /* services section----------------------------------------------  */
+    #services-cont p{
+      text-align: center;
+     }
+     #services-cont h5{
+      text-align: center;
+     }
+     #service1{
+      width: auto;
+      text-align: center;
+      height: auto;
+     } 
+     /* standard room responsive */
+     .Standard-header{
+      height: 70vh;
+      clip-path: none;
+     }
+     .standard-content{
+      display: block;
+      position: absolute;
+      top: 30%;
+      height: 20vh;
+    }
+     .standard-heading h1{
+      font-size: 50px;
+
+    }
+    .standard-heading img{
+      position: relative;
+      left: 24%;
+      top: -10px;
+    }
+    .button-s{
+      display: flex;
+      position: relative;
+      top: 30px;
+      justify-content: center;
+    }
+    #stand-btn{
+      height: 3rem;
+      width: 10rem;
+    }
+    .sroll{
+      position: absolute;
+      top: 60%;
+      height: 60px;
+    }
+    .sroll i{
+      width: 60px;
+      padding-top: 15px;
+    }
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+  /* deluxe responsive section----------------------------- */
+  .Deluxe-header{
+    height: 70vh;
+    clip-path: none;
+   }
+    /* executive responsive section----------------------------- */
+  .Executive-header{
+    height: 70vh;
+    clip-path: none;
+   }
+    /* executive responsive section----------------------------- */
+  .Luxury-header{
+    height: 70vh;
+    clip-path: none;
+   }
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+  }
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+
+#h-m{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.721),rgba(218, 165, 32, 0.242)),url(images/meeting-gallery-6.jpeg);
+    height: 100vh;
+    width: 98.9vw;
+    background-size: cover;
+}
+#reservation-hd h1{
+    text-align: center;
+    color: goldenrod;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.742);
+    font-weight: 400;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#form-res{
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 70%;
+    align-items: center;
+}
+form{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.74);
+    padding: 20px;
+    border: none;
+}
+form label{
+  color: white;
+}
+fieldset{
+    border: none;
+}
+fieldset h2{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 23px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.648);
+    color: goldenrod;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 500;
+}
+fieldset input{
+    border: none;
+    outline: none;
+}
+fieldset i{
+    margin-left: 5px;
+    color: goldenrod;
+}
+#Partition input{
+    width: 97%;
+    padding: 5px 0px 5px 5px;
+    margin-bottom: 12px;
+}
+#Partition-2 input{
+    width: 97%;
+    padding: 4px 0px 5px 5px;
+    margin-bottom: 10px;
+}
+#hf-2{
+    margin-top: 9px;
+    padding: 4px 0px 5px 0px;
+    
+}
+#Partition-2 select{
+    width: 97%;
+    border: none;
+    padding: 5px 0px 5px 0px;
+    margin-top: 25px;
+}
+form button{
+    width: 100%;
+    border: none;
+    padding: 5px 0px 6px 0px;
+    margin-top: 0px;
+    background-color: goldenrod;
+    cursor: pointer;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+}
+@media (min-width:1200px){
+    #Partition input{
+        width: 98%;
+    }
+}
+@media (max-width: 990px){
+    #Partition input{
+        width: 95%;
+    }
+    fieldset h2{
+        font-size: 1em;
+    }
+}
+@media (max-width:768px){
+    #reservation-hd h1{
+        font-size: 33px;
+    }
+    form{
+        display: block;
+    }
+    fieldset h2{
+        font-size: 17px;
+    }
+    #Partition input{
+        width: 100%;
+    }
+    #form-res{
+        top: 4%;
+    }
+}
+#input1{
+  height: 40px;
+  width: 500px;
+}
+#input2{
+  height: 200px;
+  width: 800px;
+}
+#submit{
+  position: absolute;
+  top: 83%;
+  left: 37px;
+}

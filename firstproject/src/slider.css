@@ -1,0 +1,94 @@
+.carousel{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    bottom: 71px;
+}
+.carousel img{
+  height: 105vh;
+  object-fit: cover;
+  filter: saturate(110%)brightness(60%)contrast(110%);
+
+}
+.booking{
+    width: 330px;
+    height: auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    z-index: 2;
+  }
+  .booking input{
+    background-color: gray;
+    color: white;
+  
+  }
+  .booking h2{
+    font-size: 20px;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: goldenrod;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  label{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .booking button{
+    background-color: goldenrod;
+    border-radius: 5px;
+    border: none;
+    padding: 9px 0px;
+    margin-top: 15px;
+    text-align: center;
+    width: 100%;
+    color: black;
+    transition-duration: .5s;
+    box-shadow: 2px 2px 5px black;
+  }
+  .booking button:hover{
+    background-color: black;
+    color: goldenrod;
+  
+  }
+  .nav{
+    background: white;
+    width: 85%;
+    position: relative;
+    left: 7%;
+    height: 73px;
+    top: 70px;
+  }
+  .nav ul{
+    margin-right: 5px;
+  }
+  .nav ul li{
+    margin: 0 5px;
+    /* position: relative;
+    left: 300px; */
+    z-index: 10;
+  }
+  .nav ul li a{
+    color: grey;
+    font-size: 18px;
+    z-index: 11;
+  }
+  .nav .logo{
+    float: left;
+    color: goldenrod;
+    font-size: 35px;
+    font-weight: 800;
+    line-height: 70px;
+    padding-left: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.459);
+    background-color: black;
+    padding-bottom: 4px;
+    padding-right: 20px;
+    height: 73px;
+  }
+  
